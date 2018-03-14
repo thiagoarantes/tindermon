@@ -1,0 +1,10 @@
+div {
+    text-align: center;
+    color: #666;
+    padding: 10px;
+    line-height: 2em;
+}
+
+div img {
+    max-width: 100%;
+}

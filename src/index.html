@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Tindermon</title>
+  <base href="/">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <script>
+    function catchIt(obj) { obj.closest(".pokemon").className += " catch"; }
+    function runFromIt(obj) { obj.closest(".pokemon").className += " run"; }
+    function openMenu() {
+      document.getElementById("mySidenav").className += " open";
+      document.getElementById("menu-icon").className += " open";
+    } 
+    function closeMenu() {
+      document.getElementById("mySidenav").className = "sidenav";
+      document.getElementById("menu-icon").className = " menu";
+    }
+  </script>
+</head>
+<body>
+  <app-root></app-root>
+</body>
+</html>
