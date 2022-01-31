@@ -8,7 +8,10 @@
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "build:test": "ng build --base-href /tindermon/ && cat './dist/index.html' >> './dist/404.html'",
+    "deploy:test": "gh-pages -d dist",
+    "pages:test": "npm run build:test && npm run deploy:test"
   },
   "private": true,
   "dependencies": {
