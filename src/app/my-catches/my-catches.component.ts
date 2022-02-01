@@ -1,6 +1,6 @@
 import { POKEMONS } from "./../mock-database";
-import { Pokemon } from "./../pokemon";
 import { Component, OnInit } from "@angular/core";
+import { Router } from "@angular/router";
 
 @Component({
   selector: "app-my-catches",
@@ -8,7 +8,7 @@ import { Component, OnInit } from "@angular/core";
   styleUrls: ["./my-catches.component.css"],
 })
 export class MyCatchesComponent implements OnInit {
-  constructor() {}
+  constructor(private router: Router) {}
 
   searchCriteria = "";
   pokemons = [];
@@ -26,5 +26,12 @@ export class MyCatchesComponent implements OnInit {
 
   ngOnInit() {
     this.getList();
+  }
+
+  openUrl(name: string): void {
+    window.open(
+      `https://bulbapedia.bulbagarden.net/wiki/${name}_(Pok%C3%A9mon)`,
+      "pokemon"
+    );
   }
 }
