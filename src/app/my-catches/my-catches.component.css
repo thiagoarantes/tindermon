@@ -1,47 +1,57 @@
 div#my-catches h2 {
-    font-size: 14px;
-    font-weight: bold;
-    margin: 18px 3px 10px;
-    text-align: center;
+  font-size: 14px;
+  font-weight: bold;
+  margin: 18px 3px 10px;
+  text-align: center;
 }
 
 div#my-catches .find {
-    width: 100%;
-    padding: 8px;
-    font-size: 14px;
-    margin: 10px 0;
+  width: 100%;
+  padding: 8px;
+  font-size: 14px;
+  margin: 10px 0;
 }
 
 div#my-catches table {
-    width: 100%;
+  width: 100%;
 }
 
 div#my-catches td {
-    border-bottom: 1px solid #CECECE;
-    margin: 0;
-    padding: 0;
+  border-bottom: 1px solid #cecece;
+  margin: 0;
+  padding: 0;
 }
 
 div#my-catches td.image {
-    width: 60px;;
+  width: 60px;
 }
 
 div#my-catches td.image img {
-    width: 70px;
-    padding: 5px;
+  width: 70px;
+  padding: 5px;
 }
 
 div#my-catches td.name {
-    font-size: 14px;
-    font-weight: bold;
-    padding-left: 15px;
+  font-size: 14px;
+  font-weight: bold;
+  padding-left: 15px;
 }
 
 div#my-catches td.no-catches {
-    font-size: 14px;
-    font-weight: bold;
-    color: #CECECE;
-    text-align: center;
-    border: none;
-    padding-top: 10px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #cecece;
+  text-align: center;
+  border: none;
+  padding-top: 10px;
+}
+
+div#my-catches .link {
+  text-decoration: none;
+  transition: all 0.2s ease-out;
+}
+
+div#my-catches .link:hover {
+  color: white;
+  background: #333;
 }

@@ -5,7 +5,16 @@
       *ngIf="!pokemon.choiceMade"
       [ngStyle]="{ 'z-index': pokemon.z }"
     >
-      <div class="name">#{{ pokemon.id }} | {{ pokemon.name }}</div>
+      <div class="name">
+        <a
+          class="link"
+          href="https://bulbapedia.bulbagarden.net/wiki/{{
+            pokemon.name
+          }}_(Pok%C3%A9mon)"
+          target="pokemon"
+          >#{{ pokemon.id }} | {{ pokemon.name }}</a
+        >
+      </div>
       <div class="image">
         <img src="assets/img/{{ pokemon.id }}.png" [alt]="pokemon.name" />
       </div>

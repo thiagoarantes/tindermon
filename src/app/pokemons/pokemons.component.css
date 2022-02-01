@@ -58,7 +58,7 @@ div.pokemon div.image {
 div.pokemon.isover div.image {
   height: 475px;
   background-color: #fff;
-  color: #CECECE;
+  color: #cecece;
   font-size: 60px;
   text-align: center;
   padding-top: 50px;
@@ -85,6 +85,16 @@ div.pokemon div.actions img {
   -moz-transition: all 0.2s ease-in-out 0s;
   -webkit-transition: all 0.2s ease-in-out 0s;
   -o-transition: all 0.2s ease-in-out 0s;
+}
+
+div.pokemon .link {
+  text-decoration: none;
+  transition: all 0.2s ease-out;
+}
+
+div.pokemon .link:hover {
+  color: white;
+  background: #333;
 }
 
 @media (min-width: 551px) {
