@@ -1,39 +1,46 @@
 <div id="pokemons">
-  <div *ngFor="let pokemon of pokemons">
-    <div
-      class="pokemon"
-      *ngIf="!pokemon.choiceMade"
-      [ngStyle]="{ 'z-index': pokemon.z }"
-    >
-      <div class="name">
-        <a
-          class="link"
-          href="https://bulbapedia.bulbagarden.net/wiki/{{
-            pokemon.name
-          }}_(Pok%C3%A9mon)"
-          target="pokemon"
-          >#{{ pokemon.id }} | {{ pokemon.name }}</a
-        >
-      </div>
-      <div class="image">
-        <img src="assets/img/{{ pokemon.id }}.png" [alt]="pokemon.name" />
-      </div>
-      <div class="actions">
-        <img
-          class="action-run"
-          src="assets/img/action-run.png"
-          (click)="onRun(pokemon)"
-          onclick="runFromIt(this);"
-          alt="Run from it!"
-        />
-        <img
-          class="action-catch"
-          src="assets/img/action-catch.png"
-          (click)="onCatch(pokemon)"
-          onclick="catchIt(this);"
-          alt="Catch it!"
-        />
-      </div>
+  <div
+    class="pokemon top"
+    [class.catch]="isCatch"
+    [class.run]="isRun"
+    *ngIf="pokemon"
+  >
+    <div class="name">
+      <a
+        class="link"
+        href="https://bulbapedia.bulbagarden.net/wiki/{{
+          pokemon.name
+        }}_(Pok%C3%A9mon)"
+        target="pokemon"
+        >#{{ pokemon.id }} | {{ pokemon.name }}</a
+      >
+    </div>
+    <div class="image">
+      <img src="assets/img/{{ pokemon.id }}.png" [alt]="pokemon.name" />
+    </div>
+    <div class="actions">
+      <img
+        class="action-run"
+        src="assets/img/action-run.png"
+        (click)="onRun(pokemon)"
+        alt="Run from it!"
+      />
+      <img
+        class="action-catch"
+        src="assets/img/action-catch.png"
+        (click)="onCatch(pokemon)"
+        alt="Catch it!"
+      />
+    </div>
+  </div>
+  <div class="pokemon bottom" *ngIf="nextp">
+    <div class="name">#{{ nextp.id }} | {{ nextp.name }}</div>
+    <div class="image">
+      <img src="assets/img/{{ nextp.id }}.png" />
+    </div>
+    <div class="actions">
+      <img class="action-run" src="assets/img/action-run.png" />
+      <img class="action-catch" src="assets/img/action-catch.png" />
     </div>
   </div>
   <div class="pokemon isover">

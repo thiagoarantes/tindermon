@@ -1,7 +1,6 @@
 export class Pokemon {
-    id: number;
-    name: string;
-    catch: boolean;
-    choiceMade: boolean;
-    z: number;
+  id: number;
+  name: string;
+  catch: boolean;
+  choiceMade: boolean;
 }

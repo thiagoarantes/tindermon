@@ -8,10 +8,14 @@ div.pokemon {
   top: 40;
   background-color: #fff;
   width: 100%;
-  transition: all 0.5s ease-in-out 0s;
-  -moz-transition: all 0.5s ease-in-out 0s;
-  -webkit-transition: all 0.5s ease-in-out 0s;
-  -o-transition: all 0.5s ease-in-out 0s;
+}
+
+div.pokemon.top {
+  z-index: 2;
+}
+
+div.pokemon.bottom {
+  z-index: 1;
 }
 
 div.pokemon.catch {
@@ -19,8 +23,13 @@ div.pokemon.catch {
   -moz-transform: rotateZ(45deg);
   -webkit-transform: rotateZ(45deg);
   -o-transform: rotateZ(45deg);
-  opacity: 0.1;
+  opacity: 0;
   margin-left: 200px;
+
+  transition: all 0.5s ease-in-out 0s;
+  -moz-transition: all 0.5s ease-in-out 0s;
+  -webkit-transition: all 0.5s ease-in-out 0s;
+  -o-transition: all 0.5s ease-in-out 0s;
 }
 
 div.pokemon.run {
@@ -28,8 +37,13 @@ div.pokemon.run {
   -moz-transform: rotateZ(-45deg);
   -webkit-transform: rotateZ(-45deg);
   -o-transform: rotateZ(-45deg);
-  opacity: 0.1;
+  opacity: 0;
   margin-left: -200px;
+
+  transition: all 0.5s ease-in-out 0s;
+  -moz-transition: all 0.5s ease-in-out 0s;
+  -webkit-transition: all 0.5s ease-in-out 0s;
+  -o-transition: all 0.5s ease-in-out 0s;
 }
 
 div.pokemon.isover {
@@ -102,11 +116,13 @@ div.pokemon .link:hover {
     max-width: 477px;
     margin: auto;
   }
+
   div.pokemon {
     border-radius: 20px;
     border: 1px solid rgba(0, 0, 0, 0.0975);
     max-width: 477px;
   }
+
   div.pokemon div.name,
   div.pokemon div.image {
     max-width: 475px;
