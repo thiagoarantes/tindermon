@@ -38,7 +38,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/about/about.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div>\n  <strong>Tindermon</strong> is a web app<br />\n  created by <strong>Thiago Arantes</strong>.<br />\n  Check out my other projects on GitHub.\n</div>\n"
+module.exports = "<div>\n  <strong>Tindermon</strong> is a web app<br />\n  created by <strong>Thiago Arantes</strong>.<br /><br />\n  Be careful as your catches will not resist the closing or refreshing of this\n  tab!\n</div>\n"
 
 /***/ }),
 
