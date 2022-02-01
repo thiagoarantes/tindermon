@@ -1,18 +1,31 @@
 <header id="app-header">
   <div id="app-header-content">
-      <a routerLink="/tindermon"><img src="/assets/img/logo.png" alt="Tindermon App" /></a>
-      <span id="menu-icon" class="menu" onclick="openMenu();">&#9776;</span>
+    <a routerLink="/tindermon"
+      ><img src="/assets/img/logo.png" alt="Tindermon App"
+    /></a>
+    <span
+      id="menu-icon"
+      class="menu"
+      [class.open]="isMenuOpen"
+      (click)="toggleMenu()"
+      >&#9776;</span
+    >
   </div>
 </header>
 
 <section>
-    <router-outlet></router-outlet>
+  <router-outlet></router-outlet>
 </section>
 
-<nav id="mySidenav" class="sidenav">
-  <a href="javascript:void(0)" class="closebtn" onclick="closeMenu();">&times;</a>
-  <a routerLink="/tindermon" onclick="closeMenu();" class="menu-item">Catch Center</a>
-  <a routerLink="/mycatches" onclick="closeMenu();" class="menu-item">All My Catches</a>
-  <a routerLink="/about" onclick="closeMenu();" class="menu-item">About</a>
+<nav id="mySidenav" class="sidenav" [class.open]="isMenuOpen">
+  <a href="javascript:void(0)" class="closebtn" (click)="toggleMenu()"
+    >&times;</a
+  >
+  <a routerLink="/tindermon" (click)="toggleMenu()" class="menu-item"
+    >Catch Center</a
+  >
+  <a routerLink="/mycatches" (click)="toggleMenu()" class="menu-item"
+    >All My Catches</a
+  >
+  <a routerLink="/about" (click)="toggleMenu()" class="menu-item">About</a>
 </nav>
-
