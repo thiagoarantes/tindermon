@@ -6,7 +6,7 @@ import { PokemonsComponent } from "./pokemons/pokemons.component";
 import { AboutComponent } from "./about/about.component";
 
 const routes: Routes = [
-  { path: "**", component: PokemonsComponent },
+  { path: "", redirectTo: "/home", pathMatch: "full" },
   { path: "home", component: PokemonsComponent },
   { path: "mycatches", component: MyCatchesComponent },
   { path: "about", component: AboutComponent },
